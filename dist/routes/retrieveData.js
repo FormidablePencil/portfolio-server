@@ -19,23 +19,17 @@ const tech_1 = __importDefault(require("../model/tech"));
 exports.retrieveWholeProjectCollection = express_1.default.Router();
 exports.retrieveWholeProjectCollection.get('/gallery', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const projectCollection = yield project_1.default.find();
-    if (!projectCollection)
-        return res.sendStatus(404);
     res.status(202).send(projectCollection);
 }));
 exports.retrieveWhileTechCollection = express_1.default.Router();
 exports.retrieveWhileTechCollection.get('/tech', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const techCollection = yield tech_1.default.find();
-    if (!techCollection)
-        return res.sendStatus(404);
     res.status(202).send(techCollection);
 }));
 exports.retriveAllOfProjectAndTechCollections = express_1.default.Router();
 exports.retriveAllOfProjectAndTechCollections.get('/retrieveAllData', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const projectCollection = yield project_1.default.find();
     const techCollection = yield tech_1.default.find();
-    if (!techCollection || !projectCollection)
-        return res.sendStatus(404);
     res.status(202).send({ projectCollection, techCollection });
 }));
 //# sourceMappingURL=retrieveData.js.map
