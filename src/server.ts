@@ -14,12 +14,12 @@ app.use('/', retriveAllOfProjectAndTechCollections)
 
 app.listen(port, () => console.log(`server started at http://localhost:${port}`))
 
-// mongoose.connect(process.env.MONGO_URI, {
-//   useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true
-// }, () => console.log('connected to db'))
+mongoose.connect(process.env.MONGO_URI, {
+  useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true
+}, () => console.log('connected to db'))
 
-// mongoose.connection
-//   .once('open', () => console.log('connection successful'))
-//   .on('error', (error) => console.log(error, 'connection successful'))
+mongoose.connection
+  .once('open', () => console.log('connection successful'))
+  .on('error', (error) => console.log(error, 'connection successful'))
 
 // npm installings > typescript & nodemon (tsConfig, nodemonConfig) > mongoose & dotenv for connecting to the server
