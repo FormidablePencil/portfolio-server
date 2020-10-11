@@ -41,5 +41,8 @@
     "@types/node": "^14.11.8",
     "tslint": "^6.1.2",
     "typescript": "^3.9.6"
+  },
+  "engines": {
+    "node": "v12.14.1"
   }
 }
