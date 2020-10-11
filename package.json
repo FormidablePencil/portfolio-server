@@ -4,11 +4,11 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
-    "start": "node -r ts-node/register ./src/server.ts",
-    "start:watch": "nodemon",
-    "build": "tsc",
-    "prestart": "npm run build"
+    "start": "ts-node ./src/server.ts",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/src/server.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
   },
   "nodemonConfig": {
     "ignore": [

@@ -14,7 +14,7 @@ app.use(cors_1.default());
 app.use('/demo', retrieveData_1.retrieveWholeProjectCollection, retrieveData_1.retrieveWhileTechCollection);
 app.use('/', retrieveData_1.retriveAllOfProjectAndTechCollections);
 app.listen(port, () => console.log(`server started at http://localhost:${port}`));
-mongoose_1.default.connect(process.env.MONGODB, {
+mongoose_1.default.connect(process.env.MONGO_URI, {
     useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true
 }, () => console.log('connected to db'));
 mongoose_1.default.connection
