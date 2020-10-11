@@ -9,7 +9,7 @@ require("dotenv/config");
 const retrieveData_1 = require("./routes/retrieveData");
 const cors_1 = __importDefault(require("cors"));
 const app = express_1.default();
-const port = 8000;
+const port = process.env.PORT || 8000;
 app.use(cors_1.default());
 app.use('/demo', retrieveData_1.retrieveWholeProjectCollection, retrieveData_1.retrieveWhileTechCollection);
 app.use('/', retrieveData_1.retriveAllOfProjectAndTechCollections);
