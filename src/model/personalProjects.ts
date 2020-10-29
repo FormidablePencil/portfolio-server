@@ -16,5 +16,3 @@ const personalProjectSchema = new mongoose.Schema({
 
 const personalProjectModel = mongoose.model('personal-projects', personalProjectSchema)
 export default personalProjectModel
-
-
