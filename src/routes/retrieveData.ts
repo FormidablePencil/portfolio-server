@@ -1,10 +1,10 @@
 import express from 'express'
-import personalProjectModel from '../model/personalProjects'
+import ProjectModel from '../model/project'
 import techModel from '../model/tech'
 
 export const retrieveWholeProjectCollection = express.Router()
 retrieveWholeProjectCollection.get('/gallery', async (req, res) => {
-  const projectCollection = await personalProjectModel.find()
+  const projectCollection = await ProjectModel.find()
   res.status(202).send(projectCollection)
 })
 
@@ -16,7 +16,7 @@ retrieveWhileTechCollection.get('/tech', async (req, res) => {
 
 export const retriveAllOfProjectAndTechCollections = express.Router()
 retriveAllOfProjectAndTechCollections.get('/retrieveAllData', async (req, res) => {
-  const projectCollection = await personalProjectModel.find()
+  const projectCollection = await ProjectModel.find()
   const techCollection = await techModel.find()
   res.status(202).send({ projectCollection, techCollection })
 })

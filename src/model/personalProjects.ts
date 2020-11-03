@@ -1,18 +1,5 @@
 import mongoose from 'mongoose'
+import { projectSchema } from './project'
 
-const personalProjectSchema = new mongoose.Schema({
-  title: String,
-  type: String,
-  description: String,
-  status: Number,
-  technologies: Array,
-  images: Array,
-  links: Object,
-  relavent: Object,
-  showInPortfolio: Boolean,
-  rolls: Object,
-  video: String,
-})
-
-const personalProjectModel = mongoose.model('my-projects', personalProjectSchema)
+const personalProjectModel = mongoose.model('personal-projects', projectSchema)
 export default personalProjectModel

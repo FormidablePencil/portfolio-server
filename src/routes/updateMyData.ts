@@ -8,8 +8,8 @@ updateMyData.post('/updateMyData', async (req, res, next) => {
   const nowModifiableCollection = await JSON.parse(JSON.stringify(collection))
   const changed = await addDeviceTypeToImagePushToDb(nowModifiableCollection)
   ProjectModel.insertMany(changed)
-    .then((message) => {
-      res.send(message)
+    .then((returned) => {
+      res.send(returned)
     })
 })
 
@@ -19,6 +19,8 @@ const addDeviceTypeToImagePushToDb = async (collection) => {
     doc.images = doc.images.map(item => {
       return { device: doc.type, url: item }
     })
+    doc.showInPortfolio = doc.showInPorfolio
+    delete doc.showInPorfolio
     return doc
   })
   return ress

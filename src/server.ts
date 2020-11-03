@@ -11,7 +11,7 @@ const port = process.env.PORT || 8001
 app.use(cors())
 
 app.use('/demo', retrieveWholeProjectCollection, retrieveWhileTechCollection)
-app.use('/', retriveAllOfProjectAndTechCollections)
+app.use('/', retriveAllOfProjectAndTechCollections, updateMyData)
 
 app.listen(port, () => console.log(`server started at http://localhost:${port}`))
 
