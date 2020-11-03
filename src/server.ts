@@ -2,6 +2,7 @@ import express from 'express'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 import { retrieveWhileTechCollection, retrieveWholeProjectCollection, retriveAllOfProjectAndTechCollections } from './routes/retrieveData'
+import updateMyData from './routes/updateMyData'
 import cors from 'cors'
 
 const app = express()

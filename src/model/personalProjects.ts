@@ -14,5 +14,5 @@ const personalProjectSchema = new mongoose.Schema({
   video: String,
 })
 
-const personalProjectModel = mongoose.model('personal-projects', personalProjectSchema)
+const personalProjectModel = mongoose.model('my-projects', personalProjectSchema)
 export default personalProjectModel

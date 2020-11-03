@@ -1,8 +1,20 @@
 import mongoose from 'mongoose'
 
-const projectSchema = new mongoose.Schema()
+const projectSchema = new mongoose.Schema({
+  title: String,
+  type: String,
+  description: String,
+  status: Number,
+  technologies: Array,
+  images: Array,
+  links: Object,
+  relavent: Object,
+  showInPortfolio: Boolean,
+  rolls: Object,
+  video: String,
+})
 
-const projectModel = mongoose.model('projects', projectSchema)
-export default projectModel
+const ProjectModel = mongoose.model('my-projects', projectSchema)
+export default ProjectModel
 
 
