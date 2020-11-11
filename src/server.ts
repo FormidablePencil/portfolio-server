@@ -1,7 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import 'dotenv/config'
-import { retrieveWhileTechCollection, retrieveWholeProjectCollection, retriveAllOfProjectAndTechCollections } from './routes/retrieveData'
+import { retrieveDataForLandingPage, retrieveWhileTechCollection, retrieveWholeProjectCollection, retriveAllOfProjectAndTechCollections } from './routes/retrieveData'
 import updateMyData from './routes/updateMyData'
 import cors from 'cors'
 
@@ -11,7 +11,7 @@ const port = process.env.PORT || 8001
 app.use(cors())
 
 app.use('/demo', retrieveWholeProjectCollection, retrieveWhileTechCollection)
-app.use('/', retriveAllOfProjectAndTechCollections, updateMyData)
+app.use('/', retriveAllOfProjectAndTechCollections, retrieveDataForLandingPage, updateMyData)
 
 app.listen(port, () => console.log(`server started at http://localhost:${port}`))
 
