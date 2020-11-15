@@ -1,4 +1,5 @@
 import express from 'express'
+import protfolioTextContentModel from '../model/protfolioTextContent'
 import ProjectModel from '../model/project'
 import techModel from '../model/tech'
 
@@ -19,4 +20,12 @@ retriveAllOfProjectAndTechCollections.get('/retrieveAllData', async (req, res) =
   const projectCollection = await ProjectModel.find()
   const techCollection = await techModel.find()
   res.status(202).send({ projectCollection, techCollection })
+})
+
+export const retrivedataForLandingSite = express.Router()
+retrivedataForLandingSite.get('/dataForLandingSite', async (req, res) => {
+  const projectCollection = await ProjectModel.find()
+  const techCollection = await techModel.find()
+  const protfolioTextContent = await protfolioTextContentModel.find()
+  res.status(202).send({ projectCollection, techCollection, protfolioTextContent })
 })

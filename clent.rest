@@ -8,3 +8,6 @@ GET http://localhost:8000/retrieveAllData
 
 ###
 POST http://localhost:8001/updateMyData
+
+###
+GET http://localhost:8001/dataForLandingSite
