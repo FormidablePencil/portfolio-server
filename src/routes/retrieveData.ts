@@ -27,5 +27,9 @@ retrivedataForLandingSite.get('/dataForLandingSite', async (req, res) => {
   const projectCollection = await ProjectModel.find()
   const techCollection = await techModel.find()
   const protfolioTextContent = await protfolioTextContentModel.find()
-  res.status(202).send({ projectCollection, techCollection, protfolioTextContent })
+  res.status(202).send({
+    projectCollection,
+    techCollection,
+    protfolioTextContent: protfolioTextContent[0]
+  })
 })
