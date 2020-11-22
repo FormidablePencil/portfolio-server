@@ -43,6 +43,6 @@
     "typescript": "^3.9.6"
   },
   "engines": {
-    "node": "v12.14.1"
+    "node": ">=12.0"
   }
 }
