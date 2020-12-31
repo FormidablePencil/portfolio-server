@@ -1,6 +1,6 @@
 # portfolio-server
 
-This is a server for 2 different projects; [portfolio](https://github.com/FormidablePencil/portfolio) and [my-bubble](https://github.com/FormidablePencil/my-bubble).
+This is a server for 2 different projects{ [portfolio](https://github.com/FormidablePencil/portfolio) & [my-bubble](https://github.com/FormidablePencil/my-bubble)
 
 ## Technologies utilized:
 
